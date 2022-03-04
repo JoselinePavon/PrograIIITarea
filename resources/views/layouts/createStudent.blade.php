@@ -26,7 +26,7 @@
                 <form action="{{ route('save') }}" method="POST">
                     @csrf
                     <div class="card-header text-center">
-                        <h3><i class="fas fa-university"></i> Nuevo Estudiante</h3>
+                        <h3><i class="fas fa-university"></i> Registrar Estudiante</h3>
                     </div>
 
                     <div class="card-body">

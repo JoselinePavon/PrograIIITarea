@@ -17,5 +17,10 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+//Read Student
+Route::get('/', [StudentController::class, 'studentread']);
+//Formulario Creat Student
 Route::get('/Student/Create', [StudentController::class, 'studentform']);
+//Save Student
 Route::post('/Student/Save', [StudentController::class, 'save'])->name('save');
+

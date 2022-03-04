@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Estudiante;
 use Illuminate\Http\Request;
 
 class StudentController extends Controller
@@ -9,6 +10,7 @@ class StudentController extends Controller
     //Formuilario Create Student
     public function studentform(){
         return view('layouts.createStudent');
+
     }
 
     //Save Student
@@ -27,4 +29,12 @@ class StudentController extends Controller
 
         return back()->with('estudianteSave','El Estudiante se guardo con exito');
     }
+    //Read Student
+    public function studentread(){
+        $data['studets'] = Estudiante::paginate(10);
+
+        return view('layouts.readStudent' , $data);
+    }
+
+
 }
